@@ -1,0 +1,5 @@
+Jinja2==2.11.1
+MarkupSafe==2.0.1
+PyYAML==5.3
+six==1.16.0
+yamlreader==3.0.4

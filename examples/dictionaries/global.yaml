@@ -1,0 +1,7 @@
+##
+# globals.yml
+# TBD: Determine what are global variables
+##
+---
+application_version: 1.0.0-test-version
+domain_name_servers: 'AmazonProvidedDNS'

@@ -1,0 +1,10 @@
+module "vpc" {
+  source              = {{ modules.terraform_module_vpc }}
+  vpcname             = {{ vpc.vpcname }}
+  domain_name         = {{ vpc.domain_name }}
+  is_spoke            = {{ vpc.is_spoke }}
+  k8s_nacl            = {{ vpc.k8s_nacl }}
+  vpcnum              = {{ vpc.vpcnum }}
+  peered_to_hub       = {{ vpc.peered_to_hub }}
+  domain_name_servers: {{ domain_name_servers }}
+}

@@ -1,0 +1,21 @@
+##
+# sandbox.yml
+##
+---
+environment:
+  application_version: 1.97.2
+  env_name: sandbox
+  env_region: us-east-1
+  internal_domain: sandbox.cainc.internal
+
+modules:
+  terraform_module_vpc: 'git.com/cainc'
+
+vpc:
+  vpcname: 'k8s1'
+  domain_name: sandbox.cainc.internal
+  is_spoke: true
+  k8s_nacl:  true
+  vpcnum: '9'
+  peered_to_hub: '0'
+  
