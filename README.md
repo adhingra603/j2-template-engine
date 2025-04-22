@@ -20,6 +20,13 @@ Renders a set of Jinja templates with a set of YAML dictionaries to the output d
 | '-t', '--templates' | default='./examples/templates' | Folder containing templates to be rendered |
 | '-o', '--output' | default='./output' | Folder to write rendered templates |
 
+## ⚡ Quick Start
+
+```
+git clone https://github.com/adhingra603/j2-template-engine.git
+cd j2-template-engine
+./render.sh -d examples/dictionaries -t examples/templates -o output
+```
 ## Examples:
 An [examples](./examples) folder contains dictionaries and templates to experiment with.
 
