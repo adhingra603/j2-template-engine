@@ -1,6 +1,10 @@
-# j2-template-engine
-##### Dockerized Solution :whale:
-Renders a set of Jinja templates with a set of YAML dictionaries to the output dir.
+## 🛠️ J2 Template Engine
+
+A Dockerized Jinja2 + YAML rendering tool — ideal for DevOps pipelines and infrastructure templating. Easily combine config dictionaries with Jinja templates to produce ready-to-use output files.
+
+→ `render.sh` is your CLI entrypoint.  
+→ Works great with Terraform, Helm, Ansible, or any YAML-driven tools.
+
 
 ## Notes:
 - Templates must end with `'.j2'` extension
