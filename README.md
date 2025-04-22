@@ -37,19 +37,19 @@ An [examples](./examples) folder contains dictionaries and templates to experime
 ./dictionaries/sandbox.yaml
 ./dictionaries/global.yaml
 
-❯ ~/workspaces/paas/j2-template-engine/render.sh -d dictionaries -t templates -o fonzie2
+❯ ~/workspaces/paas/j2-template-engine/render.sh -d dictionaries -t templates -o fonzie3
 ❯ find .
 .
-./fonzie2
-./fonzie2/dns.yaml
-./fonzie2/vpc.yaml
+./fonzie3
+./fonzie3/dns.yaml
+./fonzie3/vpc.yaml
 ./templates
 ./templates/dns.yaml.j2
 ./templates/vpc.yaml.j2
 ./dictionaries
 ./dictionaries/sandbox.yaml
 ./dictionaries/global.yaml
-❯ cat fonzie2/vpc.yaml
+❯ cat fonzie3/vpc.yaml
 module "vpc" {
   source              = git.com/cainc
   vpcname             = k8s1
