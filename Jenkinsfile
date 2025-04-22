@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        DOCKER_CREDENTIALS_ID = 'dockerhub-credentials'
+        DOCKER_CREDENTIALS_ID = 'dockerhub-credentials-adhingra603'
         IMAGE_NAME = "adhingra603/j2-template-engine:${env.BUILD_NUMBER}"
     }
 
