@@ -1,5 +1,9 @@
 ## 🛠️ J2 Template Engine
 
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+
+A Dockerized Jinja2 rendering engine using YAML dictionaries.
+
 A Dockerized Jinja2 + YAML rendering tool — ideal for DevOps pipelines and infrastructure templating. Easily combine config dictionaries with Jinja templates to produce ready-to-use output files.
 
 → `render.sh` is your CLI entrypoint.  
