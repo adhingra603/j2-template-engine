@@ -1,6 +1,11 @@
 pipeline {
     agent any
 
+    environment {
+        DOCKER_CREDENTIALS_ID = 'dockerhub-credentials'
+        IMAGE_NAME = "adhingra603/j2-template-engine:${env.BUILD_NUMBER}"
+    }
+
     stages {
         stage('Checkout') {
             steps {
@@ -8,24 +13,23 @@ pipeline {
             }
         }
 
-        stage('Build') {
+        stage('Docker Login') {
             steps {
-                sh 'echo "Building the project..."'
-                // Insert your build commands here
+                withCredentials([usernamePassword(credentialsId: "${DOCKER_CREDENTIALS_ID}", usernameVariable: 'DOCKER_USERNAME', passwordVariable: 'DOCKER_PASSWORD')]) {
+                    sh 'echo $DOCKER_PASSWORD | docker login -u $DOCKER_USERNAME --password-stdin'
+                }
             }
         }
 
-        stage('Test') {
+        stage('Build Docker Image') {
             steps {
-                sh 'echo "Running tests..."'
-                // Insert your test commands here
+                sh 'docker build -t $IMAGE_NAME .'
             }
         }
 
-        stage('Deploy') {
+        stage('Push Docker Image') {
             steps {
-                sh 'echo "Deploying the application..."'
-                // Insert your deployment commands here
+                sh 'docker push $IMAGE_NAME'
             }
         }
     }
